@@ -184,8 +184,7 @@ if (nextLetter) {
 });
 
 document.getElementById('newGameBtn').addEventListener('click', () => {
-  gameOver();
-  newGame()
+window.location.reload();
 })
 
 newGame();
