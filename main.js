@@ -173,6 +173,9 @@ if (isBackspace) {
       addClass(children[0], 'current')
     } else {
       for (let i = 0; i <children.length; i++){
+        if (children[i].classList.contains('extra')) {
+          children[i].remove();
+        }
         removeClass(children[i],'current');
         removeClass(children[i], 'incorrect');
         removeClass(children[i], 'correct');
