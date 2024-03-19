@@ -12,7 +12,7 @@ body {
 }
 
 main {
-  width: 600px;
+  width: 1000px;
   margin: 50px auto;
 }
 h1 {
@@ -91,13 +91,11 @@ div.word {
 
 #cursor {
   display: none;
-  width: 2px;
-  /* border-radius: 2; */
+  width: 1.5px;
   height: 1.6rem;
   background: var(--primaryColor);
   position: fixed;
   top: 195px;
-  left: 10px;
   animation: blink 1s infinite;
 }
 #game:focus #cursor {
