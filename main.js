@@ -57,9 +57,9 @@ function gameOver() {
   document.getElementById('info').innerHTML = ` WPM:${result}`;
 }
 
-document.getElementById('game').addEventListener('keyup', (ev) => {
+document.getElementById('game').addEventListener('keydown', (ev) => {
   
-  // console.log(ev)
+  console.log(ev)
   const key = ev.key;
   const currentWord = document.querySelector(".word.current");
   const currentLetter = document.querySelector(".letter.current");
@@ -70,7 +70,9 @@ document.getElementById('game').addEventListener('keyup', (ev) => {
   const isFirstLetter = currentLetter === currentWord.firstChild ;
   const words = document.getElementById('words');
   const isFirstWord = currentWord === words.firstChild;
+  const isCtrl =  ev.ctrlKey;
   
+  console.log(isCtrl)
   if (document.querySelector('#game.over')) { 
     return;
   }
@@ -128,7 +130,7 @@ document.getElementById('game').addEventListener('keyup', (ev) => {
   }
 
 if (isBackspace) {
-  if (currentLetter && isFirstLetter){
+  if (currentLetter && isFirstLetter && !isCtrl){
     if(!isFirstWord) 
     removeClass(currentWord, 'current');
     addClass(currentWord.previousSibling, 'current');
@@ -137,14 +139,14 @@ if (isBackspace) {
     removeClass(currentWord.previousSibling.lastChild, 'incorrect');
     removeClass(currentWord.previousSibling.lastChild, 'correct');
   }
-  if (currentLetter && !isFirstLetter){
+  if (currentLetter && !isFirstLetter && !isCtrl){
     
     removeClass(currentLetter, 'current');
     addClass(currentLetter.previousSibling, 'current');
     removeClass(currentLetter.previousSibling, 'incorrect');
     removeClass(currentLetter.previousSibling, 'correct');
   }
-  if (!currentLetter) {
+  if (!currentLetter && !isCtrl) {
     addClass(currentWord.lastChild, 'current');
     removeClass(currentWord.lastChild, 'incorrect');
     removeClass(currentWord.lastChild, 'correct');
@@ -152,6 +154,31 @@ if (isBackspace) {
 
   if (currentWord.lastChild.classList.contains('extra')) {
     currentWord.lastChild.remove();
+  }
+  
+// ctrl + Backspace 
+
+  const children = [...currentWord.children]; 
+  if (ev.ctrlKey && isBackspace){
+    if (currentWord.firstChild.classList.contains('current')){
+      removeClass(currentLetter, 'current');
+      removeClass(currentWord, 'current');
+      addClass(currentWord.previousSibling, 'current');
+      addClass(currentWord.previousSibling.firstChild, 'current');
+      let childrenFirstLetter = [...currentWord.previousSibling.children];
+      for (let i = 0; i <childrenFirstLetter.length; i++){
+        removeClass(childrenFirstLetter[i], 'incorrect');
+        removeClass(childrenFirstLetter[i], 'correct');
+      }
+      addClass(children[0], 'current')
+    } else {
+      for (let i = 0; i <children.length; i++){
+        removeClass(children[i],'current');
+        removeClass(children[i], 'incorrect');
+        removeClass(children[i], 'correct');
+      }
+      addClass(children[0], 'current');
+    }
   }
 }
 
