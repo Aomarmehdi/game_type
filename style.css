@@ -40,13 +40,18 @@ main {
 }
 
 button {
-  background: rgba(255, 255, 255, 0.2);
+  background-color: #333;
   border: 0;
-  color: rgba(255, 255, 255, 0.5);
+  color: #666;
   padding: 5px 20px;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 30px;
+  padding: 10px;
+}
+
+button:hover {
+  color: white;
 }
 
 div#game {
@@ -64,6 +69,7 @@ div#game {
 #game:focus #words {
   filter: blur(0);
 }
+
 /* #focus-error {
   position: absolute;
   inset: 0;
@@ -145,6 +151,16 @@ header {
 .user-logo {
   width: 20px;
 }
+
+.fa-user {
+  color: #666;
+  padding: 20px;
+}
+
+.fa-user:hover {
+  color: white;
+}
+
 
 
 
