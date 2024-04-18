@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
-
 :root {
-  --bgColor: #333;
+  --bgColor: #323437;
   --textPrimary: #fff;
   --textSecondary: #666;
   --primaryColor: #fd4;
@@ -51,7 +50,7 @@ button {
 }
 
 button:hover {
-  color: white;
+  color: #D1D0C5;
 }
 
 div#game {
@@ -158,12 +157,37 @@ header {
 }
 
 .fa-user:hover {
-  color: white;
+  color: #D1D0C5;
 }
 
+.icon {
+  display: inline-block;
+  text-decoration: none;
+  color: #e2b714;
+  font-size: 30px;
+}
 
+.text {
+  display: inline-block;
+  text-decoration: none;
+  color: #D1D0C5;
+  font-size: 30px;
+  cursor: pointer;
+  line-height: 2rem;
+  font-weight: unset;
+  unicode-bidi: isolate;
+}
 
+.aa {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
 
+a {
+  text-decoration: none;
+}
 
 
 
