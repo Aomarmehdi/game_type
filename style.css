@@ -58,21 +58,21 @@ div#game {
   position: relative;
 }
 #words {
-  filter: blur(5px);
+  /* filter: blur(5px); */
   color: var(--textSecondary);
 }
 #game:focus #words {
   filter: blur(0);
 }
-#focus-error {
+/* #focus-error {
   position: absolute;
   inset: 0;
   text-align: center;
   padding-top: 35px;
-}
+} */
 
 #game:focus #focus-error {
-  display: none;
+  /* display: none; */
 }
 
 div.word {
@@ -99,17 +99,17 @@ div.word {
 }
 
 #cursor {
-  display: none;
+  display: block;
   width: 1.5px;
   height: 1.6rem;
   background: var(--primaryColor);
   position: fixed;
-  top: 195px;
+  top: 210px;
   animation: blink 1s infinite;
 }
 
 #game:focus #cursor {
-  display: block;
+  /* display: block; */
 }
 
 div#game:focus {
@@ -117,15 +117,15 @@ div#game:focus {
 }
 
 #game.over #words {
-  opacity: .5;
+  /* opacity: .5; */
 }
 
 #game.over:focus #cursor {
   display: none;
 }
-#game.over #focus-error {
+/* #game.over #focus-error {
   display: none;
-}
+} */
 
 header {
   display: flex;
