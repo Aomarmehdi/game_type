@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
 
 :root {
   --bgColor: #323437;
@@ -183,6 +184,7 @@ header {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 a {
