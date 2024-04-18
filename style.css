@@ -1,10 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+
 :root {
   --bgColor: #333;
   --textPrimary: #fff;
   --textSecondary: #666;
   --primaryColor: #fd4;
 }
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--bgColor);
@@ -98,16 +107,17 @@ div.word {
   top: 195px;
   animation: blink 1s infinite;
 }
+
 #game:focus #cursor {
   display: block;
-  
 }
+
 div#game:focus {
   outline: 0;
 }
+
 #game.over #words {
   opacity: .5;
-  
 }
 
 #game.over:focus #cursor {
@@ -116,3 +126,45 @@ div#game:focus {
 #game.over #focus-error {
   display: none;
 }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.logo {
+  width: 200px;
+}
+
+.user-logo {
+  width: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
