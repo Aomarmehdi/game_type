@@ -57,7 +57,7 @@ function gameOver() {
   document.getElementById('info').innerHTML = ` WPM:${result}`;
 }
 
-document.getElementById('game').addEventListener('keydown', (ev) => {
+  document.addEventListener('keydown', (ev) => {
   
   console.log(ev)
   const key = ev.key;

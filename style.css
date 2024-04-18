@@ -72,7 +72,7 @@ div#game {
 } */
 
 #game:focus #focus-error {
-  /* display: none; */
+  display: none;
 }
 
 div.word {
@@ -117,7 +117,7 @@ div#game:focus {
 }
 
 #game.over #words {
-  /* opacity: .5; */
+  opacity: .5;
 }
 
 #game.over:focus #cursor {
